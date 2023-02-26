@@ -1,0 +1,332 @@
+class Ejercicios_sin_ciclos{
+    //1) Sumar dos numeros siempre cuando el primero sea mayor al segundo
+    Ejercicio1(num1,num2){
+        console.warn("/1) Sumar dos numeros siempre cuando el primero sea mayor al segundo/")
+        let sum=0
+        if (num1>num2){
+            sum=num1+num2
+            console.log(`${num1} + ${num2} = ${sum}`)
+        }else{
+            console.log(`No se puede realizar la suma ya que el primer numero es menor al segundo numero`)
+        }
+        
+    }
+    //2) Realizar una operacion segun el operador(+,-,*,/,%) realizar la suma, resta, multiplicacion, division y residuo
+    Ejercicio2(num1,num2){
+        console.warn("/2) Realizar una operacion segun el operador(+,-,*,/,%) realizar la suma, resta, multiplicacion, division y residuo/")  
+        let suma=0,resta=0,multiplicacion,division,residuo
+        let opsuma="+",oprest="-",opmulti="*",opdiv="/",opresi="%"
+        suma=num1+num2
+        resta=num1-num2
+        multiplicacion=num1*num2
+        division=num1/num2
+        residuo=num1%num2
+        console.log(num1,opsuma,num2,"=",suma)
+        console.log(num1,oprest,num2,"=",resta)
+        console.log(num1,opmulti,num2,"=",multiplicacion)
+        console.log(num1,opdiv,num2,"=",division)
+        console.log(num1,opresi,num2,"=",residuo)
+    }
+    //3) Presentar el mayor de dos numeros
+    Ejercicio3(num1,num2){
+        console.warn("/3) Presentar el mayor de dos numeros/")
+    if (num1>num2){
+        console.log(`El numero <${num1}> es mayo que el numero <${num2}>`)
+    }else if(num1<num2){
+        console.log(`El numero <${num2}> es mayor que el numero <${num1}>`)
+    }else{
+        console.log(`El numero <${num2}> y el numero <${num1}> son iguales`)
+    }
+    }
+    //4) Dado un nombre presentarlo
+    Ejercicio4(){
+        console.warn("/4) Dado un nombre presentarlo/")
+        let nombre="Jeremy"
+        console.log(nombre)
+    }
+    //5) Dado un valor de compra presentar el total considerando un 12% de iva
+    Ejercicio5(valor){
+        console.warn("/5) Dado un valor de compra presentar el total considerando un 12% de iva/")
+        let total=0,valortotal
+        total=valor*0.12
+        valortotal=total+valor
+        console.log(`El valor es <${valor}$>; El iva es <${total}$>; El total a pagar con el 12% IVA es ${valortotal}$`)
+    }
+    //6) Presentar 5 veces un nombre
+    Ejercicio6(){
+        console.warn("/6) Presentar 5 veces un nombre/")
+        let nombre="Jeremy",c=1
+        while(c<=5){
+            console.log(nombre)
+            c=c+1
+        }
+        
+    }
+    //7) Presentar los numeros multiplos de 3 del 3 al 21
+    Ejercicio7(){
+        console.warn("/7) Presentar los numeros multiplos de 3 del 3 al 21/")
+        let c=3,multiplos
+        for(c=3;c<=21;c++){
+            multiplos=c%3
+            if(multiplos==0){
+                console.log(`El <${c}> es multiplo de 3`)
+            }
+        }
+    }
+    //8) Presentar los numeros multiplos de 3 del 21 al 3
+    Ejercicio8(){
+        console.warn("/8) Presentar los numeros multiplos de 3 del 21 al 3/")
+        let c=21,multiplos
+        for(c=21;c>=3;c--){
+            multiplos=c%3
+            if(multiplos==0){
+                console.log(`El <${c}> es multiplo de 3`)
+            }
+        }
+    }
+    //9) Dados dos nombres indicar si son iguales o diferentes
+    Ejercicio9(){
+        console.warn("/9) Dados dos nombres indicar si son iguales o diferentes/")
+        let nombre1="JeRemy",nombre2="Jeremy"
+        console.log(nombre1)
+        console.log(nombre2)
+        nombre1=nombre1.toLowerCase()
+        nombre2=nombre2.toLowerCase()
+        if (nombre1==nombre2){
+            console.log(`Los nombres son iguales`)
+        }else{
+            console.log(`Los nombres no son iguales`)
+        }
+    }
+    //10) Dado diez numeros en un arreglo presentar los que tengan menos de 5 caracteres
+    Ejercicio10(){
+        console.warn("/10) Dado diez numeros en un arreglo presentar los que tengan menos de 5 caracteres/")
+        let arreglo=[215656,4564546,4545,454,489,8489,489,494,49848,454]
+        let i,numero
+        console.log(`El arreglo es: ${arreglo}`)
+        console.log("Numeros menores de 5 caracteres")
+        for(i=0;i<arreglo.length;i++){
+            numero=arreglo[i]
+            if(numero.toString().length<5){
+                console.log(numero)
+            }
+        }
+    }
+    //11) Dado un arreglo presentar sus elementos
+    Ejercicio11(){
+        console.warn("/11) Dado un arreglo presentar sus elementos/")
+        let arreglo=[123,12]
+        console.log(arreglo)
+    }
+    //12) Dado un arreglo de numeros presentar los menores a 10
+    Ejercicio12(){
+        console.warn("/12) Dado un arreglo de numeros presentar los menores a 10/")
+        let arreglo=[20,7,9,8,4,14,4,10]
+        let i=0,numero
+        console.log(`El arreglo es: ${arreglo}`)
+        console.log("Numeros menores de 10")
+        for(i=0;i<arreglo.length;i++){
+        numero=arreglo[i]
+        if(numero.toString()<10){
+        console.log(numero)}
+    }
+
+    }
+    //13) Dado un arreglo de numeros presentar los impares y al final la suma de los pares
+    Ejercicio13(){
+        console.warn(`/13) Dado un arreglo de numeros presentar los impares y al final la suma de los pares/`)
+        let arreglo=[5,9,7,10,13,20,60]
+        let suma=0,i=0,numero
+        console.log(`El arreglo es: ${arreglo}`)
+        console.log("Numeros impares")
+        for(i=0;i<arreglo.length;i++){
+            numero=arreglo[i]
+            if(numero%2 != 0){
+                console.log(numero)
+            }else{
+                suma=suma+numero
+            }
+        }
+        console.log(`La suma de los numeros pares es = ${suma}`)
+    }
+    //14) Presentar el primero el medio y el ultimo valor de un arreglo
+    Ejercicio14(){
+        console.warn(`/14) Presentar el primero el medio y el ultimo valor de un arreglo/`)
+        let arreglo=[15,2,5,6,1,4,8,5,8,10]
+        console.log(`El arreglo es: ${arreglo}`)
+        let medio = Math.floor(arreglo.length/2)
+        console.log(`El primer numero del arreglo es ${arreglo[0]}`)
+        console.log(`El numero de en medio es ${arreglo[medio]}`)
+        console.log(`El ultimo numero del arreglo es ${arreglo[arreglo.length - 1]}`)
+    }
+    //15) Calcular el vuelto de un a compra dado el costo y el pago
+    Ejercicio15(costo,pago){
+        console.warn("/15) Calcular el vuelto de un a compra dado el costo y el pago/")
+        let vuelto
+        if(costo>pago){
+            console.log(`El pago <${pago}> es insuficiente para el costo <${costo}> del producto`)
+        }else{
+        vuelto=pago-costo
+        console.log(`El costo de la compra es ${costo}$`)
+        console.log(`El pago de la compra es ${pago}$`)
+        console.log(`El vuelto de la compra es de ${vuelto}$`)}
+    }
+}
+class Ejercicios_con_ciclos{
+    //16) Presentar la tabla de multiplicar de cualquier numero del 1 al 12
+    Ejercicio16(num1){
+        console.warn("/16) Presentar la tabla de multiplicar de cualquier numero del 1 al 12/")
+        console.log(`Se presenta la tabla del ${num1}`)
+        let c=1,result
+        while(c<=12){
+            result=num1*c
+            console.log(num1, "*", c, "=", result)
+            c=c+1
+        }
+    }
+    //17) Realizar la multiplicacion de dos numeros por medio de sumas sucesivas
+    Ejercicio17(num1,num2){
+        console.warn(`/17) Realizar la multiplicacion de dos numeros por medio de sumas sucesivas/`)
+        let acum=0,c=1
+        console.log(`Los numeros a multiplicar son <${num1}> * <${num2}>`)
+        while(c<=num2){
+            acum=acum+num1
+            c=c+1
+        }       
+        console.log(acum) 
+    }
+    //18)Realizar la division de dos numeros por medio de restas sucesivas
+    Ejercicio18(num1,num2){
+        console.warn("/18)Realizar la division de dos numeros por medio de restas sucesivas/")
+        let c=0
+        console.log(`Los numeros a dividir son <${num1}> / <${num2}>`)
+        while(num1>=num2){
+            num1=num1-num2
+           c=c+1 
+        }
+    console.log(`El cociente es = ${c}`)
+    console.log(`El residuo = ${num1}`)
+    }
+    //19)Calcular el factorial de un numero
+    Ejercicio19(num1){
+        console.warn(`/19)Calcular el factorial de un numero/`)
+        let factorial=1,x=1
+            while(x<=num1){
+                factorial=factorial*x
+                x=x+1
+            }
+            console.log(`El factorial del numero <${num1}> = ${factorial}`)
+    }
+    //20)Calcular el exponente de un numero
+    Ejercicio20(num1,exp){
+        console.warn(`/20)Calcular el exponente de un numero/`)
+        let c=1,result=1
+        while(c<=exp){
+            result=result*num1
+            c=c+1
+        }
+        console.log(`El numero <${num1}> elevado al exponente <${exp}> = ${result}`)
+    }
+    //21)Calcular la serie de fibonacci dado un numero
+    Ejercicio21(num1){
+        console.warn(`/21)Calcular la serie de fibonacci dado un numero/`)
+        let c=1,a=0,b=1,cont=3
+        console.log(`Calcular la serie fibonacci del numero<${num1}>`)
+        console.log(a,b,c)
+        while(cont<num1){
+        a=b
+        b=c
+        c=a+b
+        console.log(c)
+        cont=cont+1
+        }
+    }
+    //22) Dado un numero invertirlo
+    Ejercicio22(numero){
+        console.warn(`/22) Dado un numero invertirlo/`)
+        console.log(`El numero a invertir es ${numero}`)
+        let digito
+        while(numero>0){
+            digito=Math.floor(numero%10)
+            numero=Math.floor(numero/10)
+            console.log(`${digito}`)
+        }
+    }
+    //23) Presentar los divisores de un numero
+    Ejercicio23(num1){
+        console.warn(`/23) Presentar los divisores de un numero/`)
+        let c
+        console.log(`El numero a sacar divisores es ${num1}`)
+        if(num1==0){
+            console.log(`El numero es 0 por lo tanto no tiene divisores`)
+        }else{
+        for(c=1;c<num1;c++){
+            if(num1%c==0){
+                console.log(`El numero <${c}> es divisor`)
+            }
+        }}
+    }
+    //24) Presentar si un numero es perfecto o no (Perfecto:cuando la suma de los divisores incluidos el 1 y excluido el propio numero dada igual al numero)
+    Ejercicio24(num1){
+        console.warn(`/24) Presentar si un numero es perfecto o no (Perfecto:cuando la suma de los divisores incluidos el 1 y excluido el propio numero dada igual al numero)/`)
+        let c,sumanum1=0
+        for(c=1;c<num1;c++){
+            if(num1%c==0){
+                sumanum1=sumanum1+c
+            }
+        }if(sumanum1==num1){
+            console.log(`El numero <${num1}> es un numero perfecto`)
+        }else{
+            console.log(`El numero <${num1}> no es un numero perfecto`)
+        }
+    }
+    //25) Verfificar si un numero es primo o no(Primo cuando solo es divsivible para 1 y el propio numero, es decir no tenga divisores)
+    Ejercicio25(num1){
+        console.warn(`/25) Verfificar si un numero es primo o no(Primo cuando solo es divsivible para 1 y el propio numero, es decir no tenga divisores)/`)
+        let c,cont=0
+        for(c=1;c<=num1;c++){
+            if(num1%c==0){
+                    cont=cont+1
+            }
+        }
+        if(cont==2){
+            console.log(`El numero ${num1} es primo`)
+        }else{
+            console.log(`El numero ${num1} no es primo`)
+        }
+    }
+}
+let ejecucion = new Ejercicios_sin_ciclos
+let num1=Math.floor(Math.random()*10)
+let num2=Math.floor(Math.random()*10)
+let valor=Math.floor(Math.random()*1000)
+let exp=Math.floor(Math.random()*10)
+let costo=Math.floor(Math.random()*100)
+let pago=Math.floor(Math.random()*100)
+let numero=Math.floor(Math.random()*10000)
+ejecucion.Ejercicio1(num1,num2)
+ejecucion.Ejercicio2(num1,num2)
+ejecucion.Ejercicio3(num1,num2)
+ejecucion.Ejercicio4()
+ejecucion.Ejercicio5(valor)
+ejecucion.Ejercicio6()
+ejecucion.Ejercicio7()
+ejecucion.Ejercicio8()
+ejecucion.Ejercicio9()
+ejecucion.Ejercicio10()
+ejecucion.Ejercicio11()
+ejecucion.Ejercicio12()
+ejecucion.Ejercicio13()
+ejecucion.Ejercicio14()
+ejecucion.Ejercicio15(costo,pago)
+let ejecucion2 = new Ejercicios_con_ciclos
+ejecucion2.Ejercicio16(num1)
+ejecucion2.Ejercicio17(num1,num2)
+ejecucion2.Ejercicio18(num1,num2)
+ejecucion2.Ejercicio19(num1)
+ejecucion2.Ejercicio20(num1,exp)
+ejecucion2.Ejercicio21(num1)
+ejecucion2.Ejercicio22(23456)
+ejecucion2.Ejercicio23(num1)
+ejecucion2.Ejercicio24(num1)
+ejecucion2.Ejercicio25(num1)
